@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Istituto Ottico Dettoni — Brand & Style Guidelines</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Norican&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nero: #1A1A18;
+    --avorio: #F5F0E8;
+    --oro-antico: #B8924A;
+    --oro-chiaro: #D4A96A;
+    --verde-verona: #2C4A3E;
+    --rosso-arte: #8B2635;
+    --azzurro-ottica: #3B6E8C;
+    --grigio-caldo: #8A8278;
+    --bianco: #FAFAF7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--avorio);
+    color: var(--nero);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--nero);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Norican', cursive;
+    font-size: 28px;
+    color: var(--bianco);
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1;
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--oro-antico); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--nero);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+    padding-top: 64px;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 80px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 5vw, 80px);
+    font-weight: 400;
+    color: var(--bianco);
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--oro-antico);
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: rgba(245,240,232,0.6);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 60px;
+    line-height: 1.5;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 48px;
+  }
+  .hero-meta-item {
+    text-align: left;
+  }
+  .hero-meta-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--oro-antico);
+    line-height: 1;
+  }
+  .hero-meta-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 6px;
+  }
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: radial-gradient(circle at 1px 1px, rgba(184,146,74,0.8) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+  .hero-logo-display {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 60px;
+  }
+  .hero-logo-name {
+    font-family: 'Norican', cursive;
+    font-size: 68px;
+    font-weight: 400;
+    color: var(--bianco);
+    display: block;
+    line-height: 1;
+    letter-spacing: 0px;
+  }
+  .hero-logo-sub {
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-top: 16px;
+    display: block;
+    font-weight: 300;
+  }
+  .hero-logo-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 8px;
+    display: block;
+    letter-spacing: 0.1em;
+    font-style: italic;
+  }
+  .hero-border {
+    position: absolute;
+    top: 80px; bottom: 80px;
+    left: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--oro-antico), transparent);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 80px;
+  }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 3.5vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
+  .section-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--oro-antico);
+    margin-bottom: 48px;
+  }
+
+  /* BRAND ESSENCE */
+  .essence {
+    background: var(--bianco);
+  }
+  .essence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .essence-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--nero);
+  }
+  .essence-intro strong {
+    font-weight: 500;
+    color: var(--verde-verona);
+  }
+  .pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .pillar {
+    padding: 28px 32px;
+    border-left: 2px solid var(--oro-antico);
+    background: var(--avorio);
+  }
+  .pillar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--nero);
+  }
+  .pillar-text {
+    font-size: 14px;
+    color: var(--grigio-caldo);
+    line-height: 1.6;
+  }
+
+  /* COLORS */
+  .colors {
+    background: var(--nero);
+    color: var(--bianco);
+  }
+  .colors .section-title { color: var(--bianco); }
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  .color-card {
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .color-swatch {
+    height: 160px;
+    width: 100%;
+  }
+  .color-info {
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.06);
+  }
+  .color-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--bianco);
+    margin-bottom: 4px;
+  }
+  .color-role {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+  .color-hex {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--oro-antico);
+  }
+  .color-subgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .color-subcard .color-swatch { height: 100px; }
+  .color-usage-note {
+    margin-top: 48px;
+    padding: 32px 40px;
+    border: 1px solid rgba(184,146,74,0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .usage-item-title {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 12px;
+  }
+  .usage-item-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  /* TYPOGRAPHY */
+  .typography {
+    background: var(--avorio);
+  }
+  .type-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .font-card {
+    padding: 48px;
+    background: var(--bianco);
+  }
+  .font-sample-display {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--nero);
+  }
+  .font-sample-display.italic { font-style: italic; color: var(--oro-antico); }
+  .font-sample-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--nero);
+  }
+  .font-meta {
+    border-top: 1px solid #E8E0D5;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .font-meta-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .font-meta-role {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--grigio-caldo);
+  }
+  .type-scale {
+    background: var(--nero);
+    padding: 48px;
+    margin-top: 40px;
+    color: var(--bianco);
+  }
+  .type-scale-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 32px;
+  }
+  .type-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 120px;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 20px 0;
+    gap: 20px;
+  }
+  .type-row-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .type-row-sample { color: var(--bianco); }
+  .type-row-size { font-size: 11px; color: rgba(255,255,255,0.3); text-align: right; font-family: monospace; }
+
+  /* LOGO */
+  .logo-section {
+    background: var(--bianco);
+  }
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .logo-variant {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #E8E0D5;
+  }
+  .logo-variant.dark { background: var(--nero); border-color: transparent; }
+  .logo-variant.gold { background: var(--oro-antico); border-color: transparent; }
+  .logo-variant-name-dark {
+    font-family: 'Norican', cursive;
+    font-size: 44px;
+    color: var(--nero);
+  }
+  .logo-variant-name-light {
+    font-family: 'Norican', cursive;
+    font-size: 44px;
+    color: var(--bianco);
+  }
+  .logo-variant-name-gold-bg {
+    font-family: 'Norican', cursive;
+    font-size: 44px;
+    color: var(--nero);
+  }
+  .logo-sublabel {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--grigio-caldo);
+    margin-top: 8px;
+  }
+  .logo-sublabel.light { color: rgba(255,255,255,0.4); }
+  .logo-sublabel.dark-on-gold { color: rgba(26,26,24,0.5); }
+  .logo-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grigio-caldo);
+    margin-top: 20px;
+  }
+  .logo-dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .dos-box {
+    padding: 32px;
+    border: 1px solid #D4EDDA;
+    background: #F8FFF9;
+  }
+  .donts-box {
+    padding: 32px;
+    border: 1px solid #F5C6CB;
+    background: #FFF8F8;
+  }
+  .box-title {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .dos-box .box-title { color: #2D7D46; }
+  .donts-box .box-title { color: #8B2635; }
+  .rule-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .rule-list li {
+    font-size: 14px;
+    color: var(--nero);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .rule-list li::before {
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+  }
+  .dos-box li::before { content: "✓"; color: #2D7D46; }
+  .donts-box li::before { content: "✗"; color: #8B2635; }
+
+  /* TONE OF VOICE */
+  .tone {
+    background: var(--verde-verona);
+    color: var(--bianco);
+  }
+  .tone .section-title { color: var(--bianco); }
+  .tone-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .tone-spectrum {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .spectrum-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .spectrum-label-left {
+    width: 140px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.9);
+    text-align: right;
+    font-weight: 500;
+  }
+  .spectrum-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 2px;
+    position: relative;
+  }
+  .spectrum-fill {
+    height: 100%;
+    background: var(--oro-antico);
+    border-radius: 2px;
+  }
+  .spectrum-label-right {
+    width: 140px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+  }
+  .tone-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .tone-ex {
+    padding: 24px 28px;
+    background: rgba(255,255,255,0.07);
+    border-left: 2px solid var(--oro-antico);
+  }
+  .tone-ex-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 10px;
+  }
+  .tone-ex-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+  }
+  .tone-words {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .tone-word-group {}
+  .tone-word-group-title {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 16px;
+  }
+  .tone-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tone-tag {
+    padding: 6px 16px;
+    font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+  }
+  .tone-tag.yes {
+    background: rgba(184,146,74,0.15);
+    color: var(--oro-chiaro);
+    border: 1px solid rgba(184,146,74,0.3);
+  }
+  .tone-tag.no {
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    text-decoration: line-through;
+  }
+
+  /* IMAGERY */
+  .imagery {
+    background: var(--avorio);
+  }
+  .imagery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 40px;
+    height: 380px;
+  }
+  .imagery-placeholder {
+    background: var(--nero);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px;
+    text-align: center;
+  }
+  .imagery-placeholder.light { background: #DDD8CE; }
+  .imagery-placeholder.mid { background: #C8C0B0; }
+  .imagery-icon {
+    font-size: 32px;
+    opacity: 0.4;
+  }
+  .imagery-caption {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .imagery-caption.dark { color: rgba(26,26,24,0.4); }
+  .imagery-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .imagery-rule {
+    padding: 28px 0;
+    border-top: 2px solid var(--oro-antico);
+  }
+  .imagery-rule-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .imagery-rule-text {
+    font-size: 14px;
+    color: var(--grigio-caldo);
+    line-height: 1.6;
+  }
+
+  /* APPLICATIONS */
+  .applications {
+    background: var(--nero);
+    color: var(--bianco);
+  }
+  .applications .section-title { color: var(--bianco); }
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .app-card {
+    padding: 48px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .app-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: var(--bianco);
+  }
+  .app-card-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .app-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .app-spec {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .app-spec-key { color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
+  .app-spec-val { color: var(--oro-antico); font-family: monospace; }
+
+  /* WEB SECTION */
+  .web-preview {
+    background: var(--bianco);
+    border: 1px solid #E8E0D5;
+    margin-top: 48px;
+    overflow: hidden;
+  }
+  .web-bar {
+    background: #F0EBE0;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #E0D9CE;
+  }
+  .web-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .web-url {
+    background: white;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: var(--grigio-caldo);
+    font-family: monospace;
+    flex: 1;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .web-body {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    min-height: 360px;
+  }
+  .web-hero-text {}
+  .web-tag {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--oro-antico);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .web-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--nero);
+    margin-bottom: 16px;
+  }
+  .web-heading em { font-style: italic; color: var(--oro-antico); }
+  .web-body-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--grigio-caldo);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .web-cta {
+    display: inline-block;
+    background: var(--nero);
+    color: var(--bianco);
+    padding: 14px 32px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .web-visual {
+    background: var(--avorio);
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E8E0D5;
+  }
+  .web-visual-inner {
+    font-family: 'Norican', cursive;
+    font-size: 36px;
+    color: var(--grigio-caldo);
+  }
+
+  /* FOOTER */
+  .doc-footer {
+    background: var(--nero);
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(184,146,74,0.2);
+  }
+  .doc-footer-left {
+    font-family: 'Norican', cursive;
+    font-size: 24px;
+    color: var(--oro-antico);
+  }
+  .doc-footer-right {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-left > * {
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero-title { animation-delay: 0.2s; }
+  .hero-subtitle { animation-delay: 0.3s; }
+  .hero-meta { animation-delay: 0.4s; }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    section { padding: 60px 24px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 60px 24px; }
+    .color-grid { grid-template-columns: repeat(2, 1fr); }
+    .type-showcase, .essence-grid, .tone-grid, .app-grid, .logo-dos-donts { grid-template-columns: 1fr; }
+    .imagery-grid { grid-template-columns: 1fr; height: auto; }
+    .color-subgrid { grid-template-columns: 1fr; }
+    .doc-footer { flex-direction: column; gap: 24px; text-align: center; }
+    .web-body { grid-template-columns: 1fr; gap: 24px; padding: 32px; }
+    .web-visual { display: none; }
+    .logo-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Dettoni</span>
+  <ul class="nav-links">
+    <li><a href="#essence">Brand</a></li>
+    <li><a href="#colors">Colori</a></li>
+    <li><a href="#typography">Tipografia</a></li>
+    <li><a href="#logo">Logo</a></li>
+    <li><a href="#tone">Tone of Voice</a></li>
+    <li><a href="#imagery">Immagini</a></li>
+    <li><a href="#applications">Applicazioni</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding: 0; padding-top: 64px;">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Brand & Style Guidelines — Versione 1.0</span>
+    <h1 class="hero-title">L'arte di <em>vedere</em><br>dal 1927</h1>
+    <p class="hero-subtitle">Un manuale d'identità per un'istituzione veronese<br>che unisce tradizione artigianale e visione contemporanea</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-num">1927</div>
+        <div class="hero-meta-label">Fondazione</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-num">97+</div>
+        <div class="hero-meta-label">Anni di storia</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-num">Verona</div>
+        <div class="hero-meta-label">Via Cappello</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+    <div class="hero-border"></div>
+    <div class="hero-logo-display">
+      <span class="hero-logo-name">Dettoni</span>
+      <span class="hero-logo-sub">Istituto Ottico · Verona</span>
+      <span class="hero-logo-year">Est. MCMXXVII</span>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND ESSENCE -->
+<section class="essence" id="essence">
+  <div class="section-label">01 — Brand Essence</div>
+  <h2 class="section-title">Chi siamo.<br>Perché esistiamo.</h2>
+  <div class="section-divider"></div>
+  <div class="essence-grid">
+    <div>
+      <p class="essence-intro">
+        L'Istituto Ottico Dettoni è una delle poche ottiche italiane ad aver attraversato quasi un secolo di storia senza perdere la propria anima. 
+        Nata nel cuore di Verona nel 1927, è oggi custode di una <strong>tradizione artigianale</strong> che si intreccia con le tecnologie più avanzate per la salute visiva.<br><br>
+        Il brand Dettoni parla a chi cerca <strong>competenza vera, non solo una montatura</strong>. A chi vuole essere guidato da un professionista che conosce la vista come una forma d'arte.
+      </p>
+
+      <div style="margin-top: 40px; padding: 36px; background: var(--nero); color: var(--bianco);">
+        <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 16px;">Brand Statement</div>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; font-weight: 300; line-height: 1.6; color: rgba(245,240,232,0.95);">
+          "Quasi un secolo di cura per la vista. La stessa attenzione di sempre, le tecnologie di oggi."
+        </p>
+      </div>
+
+      <div style="margin-top: 32px; padding: 28px 32px; border: 1px solid #E8E0D5;">
+        <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 12px;">Posizionamento</div>
+        <p style="font-size: 14px; color: var(--grigio-caldo); line-height: 1.7;">
+          <strong style="color: var(--nero); display: block; margin-bottom: 4px;">Premium ma accessibile</strong>
+          Dettoni non è il discount né l'ottico di lusso inaccessibile. È l'istituto di fiducia dove la qualità si sente in ogni dettaglio, dal primo sorriso alla montatura consegnata perfettamente calibrata.
+        </p>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-title">⟨ Tradizione ⟩</div>
+        <div class="pillar-text">97 anni di storia a Verona. Un patrimonio che non è nostalgia, ma garanzia di metodo, continuità e fiducia generazionale. Il passato è il nostro miglior biglietto da visita.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">⟨ Competenza ⟩</div>
+        <div class="pillar-text">Non siamo venditori di occhiali. Siamo professionisti della salute visiva. Contattologia avanzata, ortocheratologia, ausili per l'ipovisione: la cura del cliente va oltre la montatura.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">⟨ Cura Artigianale ⟩</div>
+        <div class="pillar-text">Ogni cliente è una storia diversa. Prendiamo il tempo per capire, consigliare, adattare. La relazione personale è il servizio più esclusivo che offriamo.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">⟨ Radici Veronesi ⟩</div>
+        <div class="pillar-text">Via Cappello, Verona. Siamo parte di questa città. I nostri clienti storici, le nostre famiglie — siamo un pezzo vivo di Verona, non una catena.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLORS -->
+<section class="colors" id="colors">
+  <div class="section-label" style="color: var(--oro-antico);">02 — Palette Colori</div>
+  <h2 class="section-title">Colori che<br><em style="font-family: 'Cormorant Garamond', serif; font-style: italic;">parlano di storia</em></h2>
+  <div class="section-divider"></div>
+
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background: #1A1A18;"></div>
+      <div class="color-info">
+        <div class="color-name">Nero Verona</div>
+        <div class="color-role">Colore primario</div>
+        <div class="color-hex">#1A1A18 · RGB 26,26,24</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #B8924A;"></div>
+      <div class="color-info">
+        <div class="color-name">Oro Antico</div>
+        <div class="color-role">Colore accent</div>
+        <div class="color-hex">#B8924A · RGB 184,146,74</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #F5F0E8;"></div>
+      <div class="color-info">
+        <div class="color-name">Avorio</div>
+        <div class="color-role">Background primario</div>
+        <div class="color-hex">#F5F0E8 · RGB 245,240,232</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #2C4A3E;"></div>
+      <div class="color-info">
+        <div class="color-name">Verde Verona</div>
+        <div class="color-role">Colore secondario</div>
+        <div class="color-hex">#2C4A3E · RGB 44,74,62</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="color-subgrid">
+    <div class="color-card color-subcard">
+      <div class="color-swatch" style="background: #D4A96A;"></div>
+      <div class="color-info">
+        <div class="color-name">Oro Chiaro</div>
+        <div class="color-role">Variante accent</div>
+        <div class="color-hex">#D4A96A</div>
+      </div>
+    </div>
+    <div class="color-card color-subcard">
+      <div class="color-swatch" style="background: #3B6E8C;"></div>
+      <div class="color-info">
+        <div class="color-name">Azzurro Ottica</div>
+        <div class="color-role">Terziario / dettagli</div>
+        <div class="color-hex">#3B6E8C</div>
+      </div>
+    </div>
+    <div class="color-card color-subcard">
+      <div class="color-swatch" style="background: #8A8278;"></div>
+      <div class="color-info">
+        <div class="color-name">Grigio Caldo</div>
+        <div class="color-role">Testi secondari</div>
+        <div class="color-hex">#8A8278</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="color-usage-note">
+    <div>
+      <div class="usage-item-title">Combinazioni consigliate</div>
+      <div class="usage-item-text">Nero Verona + Oro Antico su Avorio è la combinazione principale. Verde Verona può sostituire il nero per sezioni che comunicano professionalità medica e affidabilità.</div>
+    </div>
+    <div>
+      <div class="usage-item-title">Proporzioni d'uso</div>
+      <div class="usage-item-text">60% Avorio/Bianco — superfici e background. 30% Nero/Verde — testi e struttura. 10% Oro Antico — accenti, CTA, elementi decorativi.</div>
+    </div>
+    <div>
+      <div class="usage-item-title">Accessibilità</div>
+      <div class="usage-item-text">Assicurarsi sempre un contrasto minimo WCAG AA 4.5:1 per i testi. Mai usare l'Oro Antico come colore di testo su sfondo chiaro sotto i 18px.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section class="typography" id="typography">
+  <div class="section-label">03 — Tipografia</div>
+  <h2 class="section-title">Caratteri che<br>raccontano eleganza</h2>
+  <div class="section-divider"></div>
+
+  <div class="type-showcase">
+    <div class="font-card">
+      <div class="font-sample-display">Aa Bb Cc<br><span class="italic">Dettoni</span></div>
+      <div class="font-meta">
+        <div>
+          <div class="font-meta-name">Playfair Display</div>
+          <div class="font-meta-role">Display · Headlines · Logo</div>
+        </div>
+        <div style="font-size: 12px; color: var(--grigio-caldo);">400 · 600 · 700<br>Regular · Italic</div>
+      </div>
+    </div>
+    <div class="font-card">
+      <div class="font-sample-cormorant">Aa Bb Cc<br>1927</div>
+      <div class="font-meta">
+        <div>
+          <div class="font-meta-name">Cormorant Garamond</div>
+          <div class="font-meta-role">Body elegante · Quote · Descrizioni</div>
+        </div>
+        <div style="font-size: 12px; color: var(--grigio-caldo);">300 · 400 · 500<br>Light Italic</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px; padding: 32px 40px; background: var(--bianco); border: 1px solid #E8E0D5;">
+    <div class="section-label" style="margin-bottom: 12px;">Font di sistema (Web / UI)</div>
+    <div style="font-family: 'DM Sans', sans-serif; font-size: 28px; color: var(--nero); margin-bottom: 12px;">DM Sans — interfacce & testi brevi</div>
+    <div style="font-size: 14px; color: var(--grigio-caldo);">Da usare per navigazione, caption, label, bottoni, testi di corpo nei contesti UI. Weight 300 · 400 · 500. Disponibile su Google Fonts.</div>
+  </div>
+
+  <div class="type-scale">
+    <div class="type-scale-label">Scala tipografica — Web</div>
+    <div class="type-row">
+      <div class="type-row-label">Display / H1</div>
+      <div class="type-row-sample" style="font-family: 'Playfair Display', serif; font-size: 48px; line-height: 1.1; font-style: italic;">L'arte di vedere</div>
+      <div class="type-row-size">48–80px · Playfair Italic</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">H2 — Sezioni</div>
+      <div class="type-row-sample" style="font-family: 'Playfair Display', serif; font-size: 36px; line-height: 1.1;">I nostri servizi</div>
+      <div class="type-row-size">32–48px · Playfair 400</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">H3 — Sottotitoli</div>
+      <div class="type-row-sample" style="font-family: 'Playfair Display', serif; font-size: 24px;">Lenti a contatto premium</div>
+      <div class="type-row-size">22–28px · Playfair 600</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">Body Elegante</div>
+      <div class="type-row-sample" style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; font-weight: 300;">La cura della vista è un'arte che si impara in decenni.</div>
+      <div class="type-row-size">18–22px · Cormorant Light Italic</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">Body / Testo</div>
+      <div class="type-row-sample" style="font-size: 16px; color: rgba(255,255,255,0.7);">Tecnologie all'avanguardia e consulenza specialistica per ogni cliente.</div>
+      <div class="type-row-size">15–17px · DM Sans 400</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">Label / UI</div>
+      <div class="type-row-sample" style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--oro-antico);">Scopri i prodotti</div>
+      <div class="type-row-size">10–12px · DM Sans 500 · UC · Tracking</div>
+    </div>
+  </div>
+
+  <!-- DUAL FONT SYSTEM -->
+  <div style="margin-top: 48px; background: var(--nero); padding: 48px;">
+    <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 32px;">Sistema a due font — Firma + Denominazione</div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 48px;">
+      
+      <!-- Firma -->
+      <div style="background: rgba(255,255,255,0.04); padding: 40px;">
+        <div style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 20px;">① La Firma — uso personale e caldo</div>
+        <div style="font-family: 'Norican', cursive; font-size: 64px; color: white; line-height: 1; margin-bottom: 24px;">Dettoni</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px;">
+          Il corsivo <strong style="color: rgba(255,255,255,0.8);">Norican</strong> è la firma del brand — evoca artigianalità, continuità familiare, calore umano. Va usato ovunque il brand si presenta come persona, non come istituzione.
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 11px; color: rgba(255,255,255,0.3);">✓ Logo principale · Navbar · Packaging</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.3);">✓ Social media · Sito web · Biglietti da visita</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.3);">✓ Comunicazioni clienti · Email signature</div>
+        </div>
+      </div>
+
+      <!-- Denominazione -->
+      <div style="background: rgba(255,255,255,0.04); padding: 40px;">
+        <div style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 20px;">② La Denominazione — uso istituzionale</div>
+        <div style="font-family: 'Cinzel', serif; font-size: 42px; font-weight: 600; color: white; line-height: 1; margin-bottom: 24px; letter-spacing: 0.08em;">OTTICA DETTONI</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px;">
+          Il maiuscoletto <strong style="color: rgba(255,255,255,0.8);">Cinzel</strong> (alternativa digitale al <em>Plate GT One Three MT Std</em> dell'insegna) rappresenta l'istituzione. Solenne, permanente, inciso come una targa. Per contesti formali e fisici.
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 11px; color: rgba(255,255,255,0.3);">✓ Insegna fisica · Targa · Timbro ufficiale</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.3);">✓ Carta intestata · Fatture · Documenti legali</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.3);">✓ Footer sito · Denominazione completa</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Together -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(184,146,74,0.2); padding: 40px; text-align: center;">
+      <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 28px;">Come appaiono insieme</div>
+      <div style="font-family: 'Cinzel', serif; font-size: 13px; font-weight: 400; letter-spacing: 0.35em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 8px;">Istituto Ottico</div>
+      <div style="font-family: 'Norican', cursive; font-size: 72px; color: white; line-height: 1; margin-bottom: 8px;">Dettoni</div>
+      <div style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.3em; color: rgba(255,255,255,0.3); text-transform: uppercase;">Verona · Est. MCMXXVII</div>
+    </div>
+
+    <!-- Rule -->
+    <div style="margin-top: 32px; padding: 24px 32px; background: rgba(184,146,74,0.08); border-left: 2px solid var(--oro-antico);">
+      <div style="font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.7;">
+        <strong style="color: var(--oro-antico);">Regola d'oro:</strong> Non usare mai i due font allo stesso peso visivo nello stesso contesto — uno deve sempre essere dominante. Nei materiali digitali domina <strong style="color: white;">Norican</strong>. Nei materiali fisici/istituzionali domina <strong style="color: white;">Cinzel</strong>.
+      </div>
+    </div>
+
+  </div>
+  <!-- END DUAL FONT SYSTEM -->
+
+</section>
+
+<!-- LOGO -->
+<section class="logo-section" id="logo">
+  <div class="section-label">04 — Logo & Identità</div>
+  <h2 class="section-title">Il segno<br>di un'istituzione</h2>
+  <div class="section-divider"></div>
+
+
+
+  <div style="margin-bottom: 24px; padding: 20px 32px; background: var(--nero); color: var(--bianco); display: flex; align-items: center; gap: 24px;"><span style="font-family: 'Norican', cursive; font-size: 56px; color: var(--oro-antico);">Dettoni</span><div><div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 6px;">Font identificato</div><div style="font-size: 18px; font-weight: 500; color: white; margin-bottom: 4px;">Norican</div><div style="font-size: 13px; color: rgba(255,255,255,0.45);">Di Vernon Adams · Google Fonts · Open Source · Free per uso commerciale</div></div></div><div style="margin-bottom: 48px; padding: 32px 40px; background: var(--avorio); border-left: 3px solid var(--oro-antico);">
+    <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--grigio-caldo); line-height: 1.7;">
+      Il logo "Dettoni" in script è il cuore dell'identità visiva. La sua firma corsiva evoca artigianalità, calore umano e continuità storica. Va sempre trattato con rispetto: nessuna distorsione, nessuna modifica del tratto, nessun effetto sovra-applicato.
+    </p>
+  </div>
+
+  <div class="logo-grid">
+    <div class="logo-variant">
+      <div class="logo-variant-name-dark">Dettoni</div>
+      <div class="logo-sublabel">Istituto Ottico · Verona</div>
+      <div class="logo-label">Versione su bianco / avorio</div>
+    </div>
+    <div class="logo-variant dark">
+      <div class="logo-variant-name-light">Dettoni</div>
+      <div class="logo-sublabel light">Istituto Ottico · Verona</div>
+      <div class="logo-label" style="color: rgba(255,255,255,0.35);">Versione su nero</div>
+    </div>
+    <div class="logo-variant gold">
+      <div class="logo-variant-name-gold-bg">Dettoni</div>
+      <div class="logo-sublabel dark-on-gold">Istituto Ottico · Verona</div>
+      <div class="logo-label" style="color: rgba(26,26,24,0.4);">Versione su oro (eventi, cerimonie)</div>
+    </div>
+  </div>
+
+  <div style="margin: 32px 0 48px; padding: 32px 40px; background: var(--nero);">
+    <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 20px;">Zona di rispetto</div>
+    <div style="display: flex; align-items: center; justify-content: center; padding: 40px; border: 1px dashed rgba(255,255,255,0.15);">
+      <div style="position: relative; padding: 24px;">
+        <span style="font-family: 'Norican', cursive; font-size: 64px; color: white;">Dettoni</span>
+        <div style="position: absolute; inset: 0; border: 1px dashed rgba(184,146,74,0.5);"></div>
+      </div>
+    </div>
+    <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 16px; text-align: center;">La zona di rispetto minima è pari all'altezza della lettera "D" su tutti i lati</p>
+  </div>
+
+  <div class="logo-dos-donts">
+    <div class="dos-box">
+      <div class="box-title">✓ Fare</div>
+      <ul class="rule-list">
+        <li>Usare il logo in versione nero su bianco/avorio come primo utilizzo</li>
+        <li>Mantenere le proporzioni originali sempre intatte</li>
+        <li>Usare la versione bianca su sfondi scuri (nero, verde scuro)</li>
+        <li>Abbinare il logo al tagline "Istituto Ottico · Verona · Est. 1927"</li>
+        <li>Rispettare la zona di rispetto minima in tutti i supporti</li>
+        <li>Usare il logo storico (forme colorate) come elemento decorativo/storico nel contesto giusto</li>
+      </ul>
+    </div>
+    <div class="donts-box">
+      <div class="box-title">✗ Non fare</div>
+      <ul class="rule-list">
+        <li>Non modificare il font o alterare il tratto del corsivo</li>
+        <li>Non applicare ombre, gradienti o effetti 3D al logo</li>
+        <li>Non usare l'oro come colore del logo su superfici gialle o ocra</li>
+        <li>Non ridimensionare in modo non proporzionale (stretch/squish)</li>
+        <li>Non posizionare su sfondi fotografici senza adeguato contrasto</li>
+        <li>Non usare varianti non autorizzate o ricreare il font a mano</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TONE OF VOICE -->
+<section class="tone" id="tone">
+  <div class="section-label" style="color: var(--oro-antico);">05 — Tone of Voice</div>
+  <h2 class="section-title">Come parliamo.<br><em style="font-family: 'Cormorant Garamond', serif;">Come ci riconoscono.</em></h2>
+  <div class="section-divider" style="background: rgba(184,146,74,0.4);"></div>
+
+  <div class="tone-grid">
+    <div>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; line-height: 1.7; color: rgba(255,255,255,0.8); margin-bottom: 48px;">
+        La voce di Dettoni è quella di un esperto di fiducia — competente, mai freddo. Parla come un artigiano che conosce il proprio mestiere da generazioni: con autorevolezza, ma con calore umano.
+      </p>
+
+      <div class="tone-spectrum">
+        <div class="spectrum-row">
+          <div class="spectrum-label-left">Autorevole</div>
+          <div class="spectrum-bar"><div class="spectrum-fill" style="width: 80%;"></div></div>
+          <div class="spectrum-label-right">Amichevole</div>
+        </div>
+        <div class="spectrum-row">
+          <div class="spectrum-label-left">Classico</div>
+          <div class="spectrum-bar"><div class="spectrum-fill" style="width: 70%;"></div></div>
+          <div class="spectrum-label-right">Contemporaneo</div>
+        </div>
+        <div class="spectrum-row">
+          <div class="spectrum-label-left">Formale</div>
+          <div class="spectrum-bar"><div class="spectrum-fill" style="width: 40%;"></div></div>
+          <div class="spectrum-label-right">Diretto</div>
+        </div>
+        <div class="spectrum-row">
+          <div class="spectrum-label-left">Empatico</div>
+          <div class="spectrum-bar"><div class="spectrum-fill" style="width: 85%;"></div></div>
+          <div class="spectrum-label-right">Razionale</div>
+        </div>
+        <div class="spectrum-row">
+          <div class="spectrum-label-left">Locale / Radicato</div>
+          <div class="spectrum-bar"><div class="spectrum-fill" style="width: 90%;"></div></div>
+          <div class="spectrum-label-right">Globale</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tone-examples">
+      <div class="tone-ex">
+        <div class="tone-ex-label">✗ Evitare</div>
+        <div class="tone-ex-text">"Offerta imperdibile! Occhiali al 50% solo oggi! Affrettati!"</div>
+      </div>
+      <div class="tone-ex">
+        <div class="tone-ex-label">✓ Preferire</div>
+        <div class="tone-ex-text">"Ogni occhio ha la sua storia. Lascia che te la raccontiamo noi, con la cura di quasi cent'anni di esperienza."</div>
+      </div>
+      <div class="tone-ex">
+        <div class="tone-ex-label">✗ Evitare</div>
+        <div class="tone-ex-text">"Siamo i migliori ottici di Verona con le migliori offerte del mercato!"</div>
+      </div>
+      <div class="tone-ex">
+        <div class="tone-ex-label">✓ Preferire</div>
+        <div class="tone-ex-text">"Dal 1927, la famiglia Dettoni si prende cura della vista dei veronesi. Alcune cose non cambiano — e questo ci rende orgogliosi."</div>
+      </div>
+      <div class="tone-ex">
+        <div class="tone-ex-label">✓ Social Media</div>
+        <div class="tone-ex-text">"Sapevi che una visita annuale dall'ottico può rivelare molto più di quanto ti aspetti? Prenota il tuo controllo — è un gesto di cura verso te stesso."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tone-words">
+    <div class="tone-word-group">
+      <div class="tone-word-group-title">Parole che ci appartengono</div>
+      <div class="tone-tags">
+        <span class="tone-tag yes">Cura</span>
+        <span class="tone-tag yes">Tradizione</span>
+        <span class="tone-tag yes">Fiducia</span>
+        <span class="tone-tag yes">Precisione</span>
+        <span class="tone-tag yes">Esperienza</span>
+        <span class="tone-tag yes">Artigianalità</span>
+        <span class="tone-tag yes">Verona</span>
+        <span class="tone-tag yes">Professionalità</span>
+        <span class="tone-tag yes">Famiglia</span>
+      </div>
+    </div>
+    <div class="tone-word-group">
+      <div class="tone-word-group-title">Parole da evitare</div>
+      <div class="tone-tags">
+        <span class="tone-tag no">Saldi</span>
+        <span class="tone-tag no">Sconti imperdibili</span>
+        <span class="tone-tag no">Mega offerta</span>
+        <span class="tone-tag no">Il migliore</span>
+        <span class="tone-tag no">Top quality</span>
+        <span class="tone-tag no">Affrettati</span>
+        <span class="tone-tag no">Low cost</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGERY -->
+<section class="imagery" id="imagery">
+  <div class="section-label">06 — Stile Fotografico</div>
+  <h2 class="section-title">Immagini che<br>trasmettono cura</h2>
+  <div class="section-divider"></div>
+
+  <div class="imagery-grid" style="height: 320px;">
+    <div class="imagery-placeholder">
+      <span class="imagery-icon">🔬</span>
+      <span class="imagery-caption">Strumenti ottici<br>— luce naturale, dettagli —</span>
+    </div>
+    <div class="imagery-placeholder light">
+      <span class="imagery-icon" style="opacity: 0.3;">👁</span>
+      <span class="imagery-caption dark">Ritratti cliente<br>— caldi, autentici —</span>
+    </div>
+    <div class="imagery-placeholder mid">
+      <span class="imagery-icon" style="opacity: 0.3;">🏛</span>
+      <span class="imagery-caption dark">Verona, Via Cappello<br>— radici, territorio —</span>
+    </div>
+  </div>
+
+  <div class="imagery-rules">
+    <div class="imagery-rule">
+      <div class="imagery-rule-title">Illuminazione</div>
+      <div class="imagery-rule-text">Sempre luce naturale o artificiale calda. Mai flash duro o luce piatta. Preferire la luce che filtra da finestre grandi, con ombre morbide che valorizzano le texture.</div>
+    </div>
+    <div class="imagery-rule">
+      <div class="imagery-rule-title">Palette Fotografica</div>
+      <div class="imagery-rule-text">Toni caldi, tendenza verso il crema, il marrone caldo e il verde. Post-produzione minima — skin tones naturali, contrasto contenuto. Mai filtri Instagram patinati.</div>
+    </div>
+    <div class="imagery-rule">
+      <div class="imagery-rule-title">Soggetti</div>
+      <div class="imagery-rule-text">Persone reali, autentiche, di tutte le età (Dettoni serve più generazioni). Strumenti e montature fotografati con cura artigianale. Dettagli di qualità — viti, engravings, materiali.</div>
+    </div>
+    <div class="imagery-rule">
+      <div class="imagery-rule-title">Composizione</div>
+      <div class="imagery-rule-text">Abbondante spazio negativo. Geometrie pulite. Mai affollato. Le immagini devono "respirare" come la nostra comunicazione: elegante, mai urlata.</div>
+    </div>
+    <div class="imagery-rule">
+      <div class="imagery-rule-title">Connessione Storica</div>
+      <div class="imagery-rule-text">Valorizzare foto d'archivio in bianco e nero del negozio storico: accostarle a immagini contemporanee crea un ponte emotivo potentissimo con la storia del brand.</div>
+    </div>
+    <div class="imagery-rule">
+      <div class="imagery-rule-title">Evitare</div>
+      <div class="imagery-rule-text">Stock photography generica, immagini di modelle irraggiungibili, sfondi bianchi sterili da catalogo. Tutto ciò che sembra "comprato" e non vissuto è estraneo a Dettoni.</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="applications" id="applications">
+  <div class="section-label" style="color: var(--oro-antico);">07 — Applicazioni</div>
+  <h2 class="section-title">Il brand<br><em style="font-family: 'Cormorant Garamond', serif; font-style: italic;">in ogni touchpoint</em></h2>
+  <div class="section-divider" style="background: rgba(184,146,74,0.4);"></div>
+
+  <div class="app-grid">
+    <div class="app-card">
+      <div class="app-card-title">Biglietti da visita</div>
+      <div class="app-card-text">Carta di cotone o kraft premium, stampa in serigrafia o rilievo. Fronte: logo Dettoni centrato su avorio. Retro: dati essenziali su nero. Niente plastica, niente patinato — materiali che si toccano.</div>
+      <div class="app-specs">
+        <div class="app-spec"><span class="app-spec-key">Formato</span><span class="app-spec-val">85 × 55 mm</span></div>
+        <div class="app-spec"><span class="app-spec-key">Carta</span><span class="app-spec-val">300gsm Cotton / Kraft</span></div>
+        <div class="app-spec"><span class="app-spec-key">Finitura</span><span class="app-spec-val">Serigrafia + Letterpress</span></div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-title">Sacchetti & Packaging</div>
+      <div class="app-card-text">Busta in carta kraft con logo Dettoni a caldo oro. Astuccio per occhiali in similpelle o tessuto scuro con stampa discreta. Il packaging deve rispecchiare il valore percepito del servizio ricevuto.</div>
+      <div class="app-specs">
+        <div class="app-spec"><span class="app-spec-key">Sacchetto</span><span class="app-spec-val">Kraft + stampa oro</span></div>
+        <div class="app-spec"><span class="app-spec-key">Astuccio</span><span class="app-spec-val">Simil-pelle nero / verde</span></div>
+        <div class="app-spec"><span class="app-spec-key">Panno occhiali</span><span class="app-spec-val">Microfibra beige / logo</span></div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-title">Sito Web</div>
+      <div class="app-card-text">Struttura pulita, tipografia dominante. Hero con grande display in Playfair Italic. Navigazione minimalista. I servizi presentati come expertise, non come prodotti di scaffale. Nessun carosello di offerte.</div>
+      <div class="app-specs">
+        <div class="app-spec"><span class="app-spec-key">Font Web</span><span class="app-spec-val">Playfair + Cormorant + DM Sans</span></div>
+        <div class="app-spec"><span class="app-spec-key">Background</span><span class="app-spec-val">#F5F0E8 + #FAFAF7</span></div>
+        <div class="app-spec"><span class="app-spec-key">CTA Primary</span><span class="app-spec-val">Nero su bianco · uppercase</span></div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-title">Social Media</div>
+      <div class="app-card-text">Instagram: feed con griglia coerente in palette avorio/nero/oro. Stories: templates minimali. Tono educativo e umano — mai promozionale. LinkedIn: storia aziendale, expertise professionale, tessuto locale.</div>
+      <div class="app-specs">
+        <div class="app-spec"><span class="app-spec-key">Post ratio</span><span class="app-spec-val">80% contenuto · 20% promo</span></div>
+        <div class="app-spec"><span class="app-spec-key">Formato base</span><span class="app-spec-val">1080 × 1080 / 4:5</span></div>
+        <div class="app-spec"><span class="app-spec-key">Frequenza</span><span class="app-spec-val">3–4 post / settimana</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEB PREVIEW -->
+  <div class="web-preview" style="margin-top: 48px;">
+    <div class="web-bar">
+      <div class="web-dot" style="background: #FF5F57;"></div>
+      <div class="web-dot" style="background: #FEBC2E;"></div>
+      <div class="web-dot" style="background: #28C840;"></div>
+      <div class="web-url">otticadettoni.com</div>
+    </div>
+    <div style="background: var(--nero); padding: 10px 60px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184,146,74,0.15);">
+      <span style="font-family: 'Norican', cursive; font-size: 20px; color: white;">Dettoni</span>
+      <div style="display: flex; gap: 32px;">
+        <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4);">Storia</span>
+        <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4);">Prodotti</span>
+        <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4);">Servizi</span>
+        <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oro-antico);">Prenota</span>
+      </div>
+    </div>
+    <div class="web-body">
+      <div class="web-hero-text">
+        <span class="web-tag">Est. 1927 · Verona</span>
+        <h3 class="web-heading">L'arte di<br>vedere <em>bene</em></h3>
+        <p class="web-body-text">Quasi un secolo di esperienza nella cura della vista. Tecnologie avanzate, consulenza personalizzata, e la fiducia di generazioni di veronesi.</p>
+        <a href="#" class="web-cta">Prenota una visita</a>
+      </div>
+      <div class="web-visual">
+        <span class="web-visual-inner">Dettoni</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="doc-footer">
+  <div>
+    <div class="doc-footer-left">Dettoni</div>
+    <div style="font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px; letter-spacing: 0.1em;">ISTITUTO OTTICO · VERONA · EST. 1927</div>
+  </div>
+  <div class="doc-footer-right">
+    Brand & Style Guidelines v1.0<br>
+    Per uso interno e fornitori autorizzati<br>
+    <span style="color: var(--oro-antico);">Via Cappello, 10/A — Verona</span>
+  </div>
+</footer>
+
+</body>
+</html>
