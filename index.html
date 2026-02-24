@@ -19,6 +19,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -781,6 +782,7 @@
     text-decoration: none;
     font-weight: 500;
   }
+  .web-nav-bar .web-nav-links-preview { display: flex; gap: 32px; }
   .web-visual {
     background: var(--avorio);
     height: 240px;
@@ -832,21 +834,160 @@
   .hero-subtitle { animation-delay: 0.3s; }
   .hero-meta { animation-delay: 0.4s; }
 
+  /* ── TABLET (max 900px) ─────────────────────────────────── */
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     section { padding: 60px 24px; }
-    .hero { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 60px; }
     .hero-right { display: none; }
-    .hero-left { padding: 60px 24px; }
+    .hero-left { padding: 60px 24px 40px; }
+    .hero-meta { gap: 28px; }
     .color-grid { grid-template-columns: repeat(2, 1fr); }
-    .type-showcase, .essence-grid, .tone-grid, .app-grid, .logo-dos-donts { grid-template-columns: 1fr; }
-    .imagery-grid { grid-template-columns: 1fr; height: auto; }
-    .color-subgrid { grid-template-columns: 1fr; }
+    .color-subgrid { grid-template-columns: repeat(3, 1fr); }
+    .type-showcase { grid-template-columns: 1fr; }
+    .essence-grid { grid-template-columns: 1fr; }
+    .tone-grid { grid-template-columns: 1fr; }
+    .app-grid { grid-template-columns: 1fr 1fr; }
+    .logo-dos-donts { grid-template-columns: 1fr; }
+    .imagery-grid { grid-template-columns: 1fr 1fr; height: auto; }
+    .imagery-rules { grid-template-columns: 1fr 1fr; }
     .doc-footer { flex-direction: column; gap: 24px; text-align: center; }
     .web-body { grid-template-columns: 1fr; gap: 24px; padding: 32px; }
     .web-visual { display: none; }
+    .logo-grid { grid-template-columns: 1fr 1fr; }
+    .color-usage-note { grid-template-columns: 1fr; gap: 24px; }
+    .tone-words { grid-template-columns: 1fr; gap: 24px; }
+    .type-row { grid-template-columns: 120px 1fr; }
+    .type-row-size { display: none; }
+  }
+
+  /* ── MOBILE (max 600px) ──────────────────────────────────── */
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; height: 56px; }
+    .hero { padding-top: 56px; }
+    .nav-logo { font-size: 22px; }
+
+    section { padding: 48px 20px; }
+
+    /* Hero */
+    .hero-left { padding: 48px 20px 40px; }
+    .hero-title { font-size: 42px !important; }
+    .hero-subtitle { font-size: 16px; }
+    .hero-meta { flex-direction: column; gap: 16px; }
+    .hero-eyebrow { font-size: 10px; }
+
+    /* Section titles */
+    .section-title { font-size: 30px !important; }
+    .section-label { font-size: 10px; }
+
+    /* Brand essence */
+    .essence-grid { grid-template-columns: 1fr; gap: 40px; }
+    .essence-intro { font-size: 17px; }
+    .pillar { padding: 20px; }
+
+    /* Colors */
+    .color-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .color-subgrid { grid-template-columns: 1fr; }
+    .color-swatch { height: 100px; }
+    .color-usage-note { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+
+    /* Typography */
+    .type-showcase { grid-template-columns: 1fr; gap: 16px; }
+    .font-card { padding: 28px 20px; }
+    .font-sample-display { font-size: 36px; }
+    .font-sample-cormorant { font-size: 36px; }
+    .type-scale { padding: 28px 20px; }
+    .type-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; }
+    .type-row-label { font-size: 10px; margin-bottom: 2px; }
+    .type-row-size { display: none; }
+
+    /* Dual font system — inline grid */
+    .dual-font-grid { grid-template-columns: 1fr !important; }
+
+    /* Logo */
     .logo-grid { grid-template-columns: 1fr; }
+    .logo-variant { padding: 40px 28px; }
+    .logo-variant-name-dark,
+    .logo-variant-name-light,
+    .logo-variant-name-gold-bg { font-size: 36px; }
+    .logo-dos-donts { grid-template-columns: 1fr; }
+
+    /* Tone of voice */
+    .tone { padding: 48px 20px; }
+    .tone-grid { grid-template-columns: 1fr; gap: 40px; }
+    .spectrum-label-left { width: 100px; font-size: 11px; }
+    .spectrum-label-right { width: 80px; font-size: 11px; }
+    .tone-ex { padding: 18px 20px; }
+    .tone-words { grid-template-columns: 1fr; }
+
+    /* Imagery */
+    .imagery-grid { grid-template-columns: 1fr; height: auto; }
+    .imagery-rules { grid-template-columns: 1fr; }
+
+    /* Applications */
+    .app-grid { grid-template-columns: 1fr; }
+    .app-card { padding: 28px 20px; }
+    .web-bar { padding: 10px 16px; }
+    .web-body { padding: 24px 20px; grid-template-columns: 1fr; }
+    .web-visual { display: none; }
+    .web-heading { font-size: 28px; }
+
+    /* Footer */
+    .doc-footer { padding: 40px 20px; flex-direction: column; gap: 20px; text-align: center; }
+    .doc-footer-left { font-size: 20px; }
+  }
+
+  /* ── INLINE STYLE OVERRIDES MOBILE ──────────────────────── */
+  @media (max-width: 600px) {
+    /* Typography dual-font section */
+    [style*="grid-template-columns: 1fr 1fr"] {
+      display: block !important;
+    }
+    /* Font id box */
+    [style*="display: flex; align-items: center; gap: 24px"] {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 16px !important;
+    }
+    /* Logo font display */
+    [style*="font-family: \'Norican\', cursive; font-size: 56px"] {
+      font-size: 40px !important;
+    }
+    [style*="font-family: \'Norican\', cursive; font-size: 64px"] {
+      font-size: 40px !important;
+    }
+    [style*="font-family: \'Norican\', cursive; font-size: 72px"] {
+      font-size: 44px !important;
+    }
+    [style*="font-family: \'Cinzel\', serif; font-size: 42px"] {
+      font-size: 26px !important;
+    }
+    /* padding overrides for inline padded blocks */
+    [style*="padding: 48px"] {
+      padding: 24px 20px !important;
+    }
+    [style*="padding: 40px"] {
+      padding: 24px 20px !important;
+    }
+    [style*="padding: 32px 40px"] {
+      padding: 20px !important;
+    }
+    /* Type scale samples */
+    .type-row-sample[style*="font-size: 48px"] { font-size: 28px !important; }
+    .type-row-sample[style*="font-size: 36px"] { font-size: 22px !important; }
+    .type-row-sample[style*="font-size: 24px"] { font-size: 18px !important; }
+    .type-row-sample[style*="font-size: 20px"] { font-size: 16px !important; }
+    /* Imagery grid height */
+    .imagery-grid[style*="height"] { height: auto !important; }
+    /* Web preview */
+    .web-bar [style*="max-width: 320px"] { max-width: 160px !important; font-size: 10px !important; }
+    /* Tone of voice intro paragraph */
+    [style*="font-size: 20px; font-weight: 300; font-style: italic"] {
+      font-size: 16px !important;
+    }
+    /* color usage note */
+    .color-usage-note { padding: 20px !important; }
   }
 </style>
 </head>
@@ -867,7 +1008,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding: 0; padding-top: 64px;">
+<section class="hero">
   <div class="hero-left">
     <span class="hero-eyebrow">Brand & Style Guidelines — Versione 1.0</span>
     <h1 class="hero-title">L'arte di <em>vedere</em><br>dal 1927</h1>
@@ -1105,7 +1246,7 @@
   <div style="margin-top: 48px; background: var(--nero); padding: 48px;">
     <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--oro-antico); margin-bottom: 32px;">Sistema a due font — Firma + Denominazione</div>
     
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 48px;">
+    <div class="dual-font-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 48px;">
       
       <!-- Firma -->
       <div style="background: rgba(255,255,255,0.04); padding: 40px;">
@@ -1327,7 +1468,7 @@
   <h2 class="section-title">Immagini che<br>trasmettono cura</h2>
   <div class="section-divider"></div>
 
-  <div class="imagery-grid" style="height: 320px;">
+  <div class="imagery-grid">
     <div class="imagery-placeholder">
       <span class="imagery-icon">🔬</span>
       <span class="imagery-caption">Strumenti ottici<br>— luce naturale, dettagli —</span>
@@ -1423,7 +1564,7 @@
       <div class="web-dot" style="background: #28C840;"></div>
       <div class="web-url">otticadettoni.com</div>
     </div>
-    <div style="background: var(--nero); padding: 10px 60px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184,146,74,0.15);">
+    <div class="web-nav-bar" style="background: var(--nero); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184,146,74,0.15);">
       <span style="font-family: 'Norican', cursive; font-size: 20px; color: white;">Dettoni</span>
       <div style="display: flex; gap: 32px;">
         <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4);">Storia</span>
